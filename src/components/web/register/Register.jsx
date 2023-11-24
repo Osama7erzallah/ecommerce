@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import { registerSchema }from '../validation/Validate.jsx'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
-import './register.css';
+import './Register.css';
 import logo1 from './img/logo1.png';
 import logo2 from './img/logo2.png';
 
