@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from './img/logo.png'
+import { Link} from 'react-router-dom';
+
 import "./Navbar.css"
 export default function Navbar() {
   return (
@@ -29,10 +31,10 @@ export default function Navbar() {
           
           <ul className="navbar-nav ">
             <li className="nav-item ">
-              <a className="register_nav" href="#">register</a>
+              <Link className="register_nav" to={`/register`} > register </Link>
             </li>
             <li className="nav-item ">
-              <a className="login_nav" href="#">login</a>
+              <Link className="login_nav" to={`/login`} > login </Link>
             </li>
                
             
