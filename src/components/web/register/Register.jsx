@@ -5,8 +5,8 @@ import { registerSchema }from '../validation/Validate.jsx'
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import './Register.css';
-import logo1 from './img/logo1.png';
-import logo2 from './img/logo2.png';
+import logo1 from './../img/logo1.png';
+import logo2 from './../img/logo2.png';
 
 export default function Register() {
 
@@ -50,7 +50,6 @@ if(data.message=='success'){
     }}
 
     const handleFeiled=(event)=>{
-        console.log(event.target.files[0])
 formik.setFieldValue('image',event.target.files[0])
     }
    

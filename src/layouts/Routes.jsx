@@ -7,6 +7,8 @@ import DashboardLayout from './DashboardLayout.jsx'
 import HomeDashboard from './../components/dashboard/home/Home.jsx'
 import CategoriesDashboard from './../components/dashboard/categories/Categories.jsx'
 import Register from '../components/web/register/Register.jsx'
+import Login from '../components/web/login/Login.jsx'
+
  export const router = createBrowserRouter([
     {
       path: '/',
@@ -23,6 +25,10 @@ import Register from '../components/web/register/Register.jsx'
         {
           path: 'register',
           element: <Register />  
+        },
+        {
+          path: 'login',
+          element: <Login />
         },
         {
             path:'*',

@@ -1,0 +1,28 @@
+.slide{
+    border-radius: 40px ;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.28);
+    /*height: 250px;
+    */background: #FDFBF7;
+    color: #333;
+    text-align: center;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+.slide_image{
+    border-radius: 40px 40px 0 0;
+    width: 100%;
+    mix-blend-mode: darken;
+    aspect-ratio:11/12;
+    object-fit: contain;
+    
+}
+
+.swiper-wrapper {
+    align-items: center;
+    padding: 5px 0;
+}
+.categories{
+}

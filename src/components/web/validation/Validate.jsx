@@ -6,3 +6,7 @@ export const registerSchema=yup.object({
     email: yup.string().required('email is required').email()
 
 })
+export const loginSchema = yup.object({
+    password: yup.string().required('password is required').min(3, 'less than 3 character').max(25, 'more than 25 character'),
+    email: yup.string().required('email is required').email()
+})

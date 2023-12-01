@@ -1,9 +1,21 @@
 import React from 'react'
 import logo from './img/logo.png'
-import { Link} from 'react-router-dom';
+import { Link,  useNavigate} from 'react-router-dom';
+import { CiLogout } from "react-icons/ci";
 
 import "./Navbar.css"
-export default function Navbar() {
+export default function Navbar({ user, setUser }) {
+
+  const navigat = useNavigate();
+  const logout =()=>{
+    localStorage.removeItem("token")
+  setUser(null);
+
+    navigat('/home');
+
+  }
+
+
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
@@ -28,18 +40,26 @@ export default function Navbar() {
 
 
           </ul>
+         {!user?
+            <ul className="navbar-nav ">
+              <li className="nav-item ">
+                <Link className="register_nav" to={`/register`} > register </Link>
+              </li>
+              <li className="nav-item ">
+                <Link className="login_nav" to={`/login`} > login </Link>
+              </li>
+            </ul>
+            : <ul className="navbar-nav ">
+              <li className="nav-item ">
+                <Link className="userName_nav" to={`/register`} > Welcome in Osy201 </Link>
+              </li>
+              <li className="nav-item ">
+                <Link className="logout_nav" onClick={logout} > <CiLogout /> </Link>
+              </li>
+            </ul>
+ 
+        } 
           
-          <ul className="navbar-nav ">
-            <li className="nav-item ">
-              <Link className="register_nav" to={`/register`} > register </Link>
-            </li>
-            <li className="nav-item ">
-              <Link className="login_nav" to={`/login`} > login </Link>
-            </li>
-               
-            
-          </ul>
-
         </div>
       </div>
     </nav>
