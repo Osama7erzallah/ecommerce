@@ -10,7 +10,7 @@ export default function Categories() {
 
 const getCategories = async()=>{
 
-  const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/categories`)
+  const { data } = await axios.get(`https://ecommerce-node4.vercel.app/categories`)
 return data;
 }
   const {data,isLoading } = useQuery('categories',getCategories);
