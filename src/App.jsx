@@ -10,6 +10,7 @@ import Categories from "./components/web/categories/Categories.jsx";
 import DashboardLayout from "./layouts/DashboardLayout.jsx";
 import HomeDashboard from './components/dashboard/home/Home.jsx';
 import CategoriesDashboard from './components/dashboard/categories/Categories.jsx'
+import CategoriesDetails from './components/web/categories/CategoriesDetails.jsx';
 
 export default function App() {
 
@@ -58,6 +59,10 @@ saveUser();
         {
           path: 'categories',
           element: <Categories />
+        },
+        {
+          path:'/products/category/:category_id',
+          element: <CategoriesDetails />
         },
         {
           path: '*',

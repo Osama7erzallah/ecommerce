@@ -6,9 +6,9 @@ import Categories from '../categories/Categories';
 export default function Home() {
   return (
     <>
-      <header className='header_img mb-50' >
+      {/* <header className='header_img mb-50' >
   <img src= {header1}  alt="header" />
-</header>
+</header> */}
 <div className="categories">
         <Categories/>
 </div>
